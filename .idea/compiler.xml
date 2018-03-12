@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Module9" />
         <module name="Selenium1" />
         <module name="Selenium2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Module9" target="1.5" />
       <module name="Selenium1" target="1.5" />
       <module name="Selenium2" target="1.5" />
     </bytecodeTargetLevel>
