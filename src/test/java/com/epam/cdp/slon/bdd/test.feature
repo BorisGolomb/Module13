@@ -2,8 +2,8 @@ Feature: AP Creation
 
 
 Scenario: Buyer User create Topic
-	Given Buyer Login and navigates to AM
-	When Buyer choose template
-	And enters all required fields
-	And clicks on [Save] Button
-	Thaan new Topic is created
+
+	Given Buyer Login
+	When Buyer navigates to AM and choose template
+	And enter all required fields and click on [Save] Button
+	Then new Topic is created

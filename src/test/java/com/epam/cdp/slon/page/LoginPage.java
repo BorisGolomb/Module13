@@ -18,13 +18,9 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "(//div[@class='login-button']/a)[1]")
     private WebElement loginButton;
 
-    public LoginPage() {
 
 
-    }
 
-    public LoginPage(WebDriver driver) {
-    }
 
     public void login(String username, String password ) {
         usernameInput.sendKeys(username);

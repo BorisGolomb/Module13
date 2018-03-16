@@ -30,10 +30,10 @@ public class FirstTest extends BaseTest {
 
         String applicationUrl = TestConfig.getApplicationUrl();
         User user = UserFactory.getUser();
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage();
         loginPage.login(user.getUsername(), user.getPassword());
         Topic topic = TopicFactory.getTopic();
-        TopicService topicService = new TopicService(driver);
+        TopicService topicService = new TopicService();
         topicService.createTopic(topic);
 
 

@@ -8,9 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class TopicService extends BaseService {
 
 
-    public TopicService(WebDriver driver) {
-        super();
-    }
+
 
     public void createTopic(Topic topic){
 

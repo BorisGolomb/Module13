@@ -9,8 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 public class ControlPoint extends BasePage {
 
 
-    public ControlPoint(WebDriver driver) {
-    }
 
 
     public void selectDays(int startDay, int endDay, String getControlPointUrl) {

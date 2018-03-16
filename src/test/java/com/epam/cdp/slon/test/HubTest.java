@@ -15,11 +15,11 @@ public class HubTest extends BaseTest {
 
         String applicationUrl = TestConfig.getApplicationUrl();
         User user = UserFactory.getUser();
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage();
         loginPage.login(user.getUsername(), user.getPassword());
         String getControlPointUrl = TestConfig.getControlPointUrl();
         ControlPoint controlPoint;
-        controlPoint = new ControlPoint(driver);
+        controlPoint = new ControlPoint();
         controlPoint.selectDays(5, 10, getControlPointUrl);
         int startDay = controlPoint.getStartDay();
         int endDay = controlPoint.getEndDay();
