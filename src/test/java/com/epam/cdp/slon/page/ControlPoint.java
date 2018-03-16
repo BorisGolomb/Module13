@@ -13,19 +13,17 @@ public class ControlPoint extends BasePage {
     }
 
 
+    public void selectDays(int startDay, int endDay, String getControlPointUrl) {
 
+        WebElement draggable = getDriver().findElement(By.xpath(String.format("//td[text()='%d']", startDay)));
+        WebElement dropable = getDriver().findElement(By.xpath(String.format("//td[text()='%d']", endDay)));
 
-    public void selectDays(int startDay, int endDay, String getControlPointUrl){
-
-        WebElement draggable = getDriver(getControlPointUrl).findElement(By.xpath(String.format("//td[text()='%d']",startDay)));
-        WebElement dropable = getDriver(getControlPointUrl).findElement(By.xpath(String.format("//td[text()='%d']",endDay)));
-
-        new Actions(getDriver("evbyminsd2156.minsk.epam.com/spin/searchControlPoint.do?primaryKey=2021826")).dragAndDrop(draggable, dropable).build().perform();
+        new Actions(getDriver()).dragAndDrop(draggable, dropable).build().perform();
 
     }
 
     public <T> T executeJavaScript(String js, Object... args) {
-        JavascriptExecutor executor = (JavascriptExecutor) getDriver("evbyminsd2156.minsk.epam.com/spin/searchControlPoint.do?primaryKey=2021826");
+        JavascriptExecutor executor = (JavascriptExecutor) getDriver();
         return (T) executor.executeScript(js, args);
     }
 

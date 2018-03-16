@@ -16,9 +16,9 @@ public class CreateApPage extends BasePage {
 
 
     public AddCustomerAMPage craeteTopicFromTemlate(String templateName) {
-        new WebDriverWait(getDriver("evbyminsd2156.minsk.epam.com/spin/searchControlPoint.do?primaryKey=2021826"), 20).until(ExpectedConditions.elementToBeClickable(actionplanDropdown));
+        new WebDriverWait(getDriver(), 20).until(ExpectedConditions.elementToBeClickable(actionplanDropdown));
         actionplanDropdown.click();
-        getDriver("evbyminsd2156.minsk.epam.com/spin/searchControlPoint.do?primaryKey=2021826").findElement(By.xpath(String.format("//span[contains(text(),'%s')]", templateName ))) .click();
+        getDriver().findElement(By.xpath(String.format("//span[contains(text(),'%s')]", templateName ))) .click();
         return new AddCustomerAMPage();
     }
 

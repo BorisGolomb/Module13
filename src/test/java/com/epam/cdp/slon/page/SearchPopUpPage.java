@@ -25,7 +25,7 @@ public class SearchPopUpPage extends BasePage{
     public void searchRecord(String text){
         searchInput.sendKeys(text);
         searchButton.click();
-        new WebDriverWait(getDriver("evbyminsd2156.minsk.epam.com/spin/searchControlPoint.do?primaryKey=2021826"), 20).until(ExpectedConditions.elementToBeClickable(firstRadioButton));
+        new WebDriverWait(getDriver(), 20).until(ExpectedConditions.elementToBeClickable(firstRadioButton));
         firstRadioButton.click();
         okButton.click();
 
