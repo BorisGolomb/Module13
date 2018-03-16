@@ -1,11 +1,8 @@
 package com.epam.cdp.slon.bdd;
 
+import cucumber.api.CucumberOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
-import cucumber.api.CucumberOptions;
-
-import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(strict = true, 
 //features="src/test/java/spin/spin.feature:4",
