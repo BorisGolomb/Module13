@@ -12,7 +12,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Module9" target="1.5" />
+      <module name="Module9" target="1.7" />
       <module name="Selenium1" target="1.5" />
       <module name="Selenium2" target="1.5" />
     </bytecodeTargetLevel>

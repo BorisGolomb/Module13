@@ -1,5 +1,6 @@
 package com.epam.cdp.slon.test;
 
+import com.epam.cdp.slon.reporting.ReportListener;
 import com.epam.cdp.slon.service.WebdriverHolder;
 import com.epam.cdp.slon.util.TestConfig;
 import org.openqa.selenium.Capabilities;
@@ -13,12 +14,14 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
-
+@Listeners(ReportListener.class)
 public abstract class BaseTest {
 
 

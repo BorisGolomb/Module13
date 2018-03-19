@@ -6,6 +6,7 @@ import com.epam.cdp.slon.model.User;
 import com.epam.cdp.slon.model.UserFactory;
 import com.epam.cdp.slon.page.LoginPage;
 import com.epam.cdp.slon.page.NavigationPage;
+import com.epam.cdp.slon.reporting.MyLogger;
 import com.epam.cdp.slon.service.TopicService;
 import com.epam.cdp.slon.util.TestConfig;
 import org.openqa.selenium.WebDriver;
@@ -28,13 +29,17 @@ public class FirstTest extends BaseTest {
     @Test
     public void testSrcCreatingBo(){
 
+        MyLogger.info("Start my test!");
         String applicationUrl = TestConfig.getApplicationUrl();
         User user = UserFactory.getUser();
+        MyLogger.info("Do login");
         LoginPage loginPage = new LoginPage();
         loginPage.login(user.getUsername(), user.getPassword());
         Topic topic = TopicFactory.getTopic();
         TopicService topicService = new TopicService();
         topicService.createTopic(topic);
+
+
 
 
 
